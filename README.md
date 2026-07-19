@@ -2,11 +2,46 @@
 
 Official public Agent Skills for yottacode.
 
-This repository contains the free, curated skill catalog that yottacode can install with the `official/<name>` source shortcut. Skills live under the `skills/` directory for compatibility with the broader skills.sh / `npx skills` ecosystem. Each skill directory contains a `SKILL.md` file plus optional `scripts/`, `references/`, and `assets/` directories.
+This repository contains the free, curated skill catalog that yottacode can install with the `official/<name>` source shortcut. Skills live under the `skills/` directory for compatibility with the broader skills.sh / `npx skills` ecosystem.
 
-[![skills.sh](https://skills.sh/b/yottadynamics/yottacode-skills)](https://skills.sh/yottadynamics/yottacode-skills)
+Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `references/`, and `assets/` directories for supporting material.
+
+## Available skills
+
+| Skill | Purpose |
+|---|---|
+| `brainstorming` | Clarifies scope, constraints, and trade-offs before planning a non-obvious change. |
+| `diagnose` | Debugs reported failures through reproduce, minimize, hypothesize, instrument, fix, and regression-test. |
+| `dockerfile-review` | Reviews Dockerfiles for correctness, caching, image size, security, and reproducibility. |
+| `documentation-and-adrs` | Captures architectural decisions, why-comments, and durable project documentation. |
+| `executing-plans` | Executes an approved plan step-by-step with checkpoints and visible progress. |
+| `git-investigation` | Uses Git history, blame, pickaxe, and bisect to answer historical code questions. |
+| `handoff` | Writes concise handoff notes for continuing work in a fresh session. |
+| `improve-codebase-architecture` | Reviews module or service structure for coupling, cohesion, boundaries, and public surface. |
+| `performance-profiler` | Finds and fixes performance problems with baseline measurements and profiling. |
+| `prototype` | Builds explicitly disposable prototypes to answer design or API questions. |
+| `receiving-code-review` | Verifies and applies PR review feedback without blindly accepting bad comments. |
+| `remote-ops` | Provides SSH, scp, rsync, and port-forwarding patterns for remote operations. |
+| `security-auditor` | Reviews code for vulnerability patterns and defense-in-depth gaps. |
+| `test-driven-development` | Guides feature and bug-fix work through the red-green-refactor loop. |
+| `verification-before-completion` | Requires concrete verification before calling a fix or feature done. |
+| `webapp-testing` | Drives local web apps through headless browser checks. |
+| `writing-plans` | Produces verifiable implementation plans for multi-file engineering tasks. |
 
 ## Layout
+
+Each skill follows this directory shape:
+
+```text
+skills/
+  <skill-slug>/
+    SKILL.md
+    scripts/      # optional helper scripts
+    references/   # optional long-form supporting material
+    assets/       # optional images or other static files
+```
+
+For example:
 
 ```text
 skills/
@@ -17,6 +52,8 @@ skills/
 ```
 
 ## Install
+
+Prerequisite: install yottacode and make sure the `yottacode` command is on your `PATH`.
 
 From yottacode, install an official skill by slug:
 
@@ -36,7 +73,7 @@ Existing GitHub installs still work directly:
 yottacode skills install yottadynamics/yottacode-skills/skills/test-driven-development
 ```
 
-The repository is also compatible with Vercel's `skills` CLI discovery:
+The repository is also compatible with Vercel's `skills` CLI. Use `--list` to discover skills and `--skill <slug>` to install one:
 
 ```bash
 npx skills add yottadynamics/yottacode-skills --list
@@ -49,7 +86,7 @@ npx skills add yottadynamics/yottacode-skills --skill test-driven-development
 - The `name` frontmatter must match `<slug>`.
 - Keep descriptions keyword-rich; yottacode uses descriptions to decide when a skill applies.
 - Keep skill bodies focused and move long supporting material into `references/`.
-- Do not include secrets, credentials, or private infrastructure details.
+- Do not include secrets, credentials, customer data, unreleased APIs, or machine-specific paths.
 
 ## Contributing
 
@@ -59,14 +96,14 @@ Contributions are welcome when they fit the public/free official catalog.
 
 - Reusable engineering workflows that apply across many repositories.
 - Debugging, testing, review, documentation, planning, and delivery playbooks.
-- Skills that work with yottacode's built-in tools without requiring private services.
+- Skills that work with yottacode's built-in tools without requiring paid services.
 - Skills with clear, vendor-neutral wording and no organization-specific assumptions.
 
 ### Not a fit for this repo
 
-- Paid, customer-specific, or private skill packs.
+- Paid or customer-specific skill packs.
 - Runtime plugins or executable extensions; those belong in a separate plugin repository.
-- Skills that require secrets, private infrastructure, or unreleased internal APIs.
+- Skills that require secrets, customer infrastructure, or unreleased internal APIs.
 - Thin wrappers around one command unless the surrounding workflow adds durable value.
 
 ### Pull request checklist
@@ -91,12 +128,9 @@ Contributions are welcome when they fit the public/free official catalog.
    yottacode skills validate ./skills/flaky-test-debugging
    ```
 
-8. Do not include credentials, customer data, private URLs, or machine-specific paths.
+8. Confirm you have the rights to submit the material under the repository's MIT license.
+9. Do not include credentials, customer data, unreleased URLs, or machine-specific paths.
 
 ### Review expectations
 
 A skill should read like a durable playbook, not a transcript. Reviewers will check that it has a clear trigger, generalizes beyond one project, stays safe by default, and uses yottacode terminology/tool names where tool references are necessary.
-
-## Public vs private packs
-
-This repository is for public/free official skills. Paid, customer-specific, or private skill packs should live in separate private repositories and can use the same `SKILL.md` layout. Runtime plugins are separate from skills and should live in a plugin-specific repository with their own versioning, signing, permissions, and compatibility rules.
