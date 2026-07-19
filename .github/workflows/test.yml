@@ -1,0 +1,22 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate skill layout
+        run: |
+          set -euo pipefail
+          for skill in skills/*; do
+            [ -d "$skill" ] || continue
+            test -f "$skill/SKILL.md"
+            slug="$(basename "$skill")"
+            grep -q "^name: ${slug}$" "$skill/SKILL.md"
+            grep -q "^description:" "$skill/SKILL.md"
+          done
