@@ -11,6 +11,7 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | Skill | Purpose |
 |---|---|
 | `brainstorming` | Clarifies scope, constraints, and trade-offs before planning a non-obvious change. |
+| `cve-explainer` | Explains CVEs from public sources with severity, impact, exposure, and remediation guidance. |
 | `diagnose` | Debugs reported failures through reproduce, minimize, hypothesize, instrument, fix, and regression-test. |
 | `dockerfile-review` | Reviews Dockerfiles for correctness, caching, image size, security, and reproducibility. |
 | `documentation-and-adrs` | Captures architectural decisions, why-comments, and durable project documentation. |
@@ -23,6 +24,7 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | `receiving-code-review` | Verifies and applies PR review feedback without blindly accepting bad comments. |
 | `remote-ops` | Provides SSH, scp, rsync, and port-forwarding patterns for remote operations. |
 | `security-auditor` | Reviews code for vulnerability patterns and defense-in-depth gaps. |
+| `security-scanner` | Runs Trivy-based scans for CVEs, misconfigurations, secrets, licenses, and SBOMs. |
 | `test-driven-development` | Guides feature and bug-fix work through the red-green-refactor loop. |
 | `verification-before-completion` | Requires concrete verification before calling a fix or feature done. |
 | `webapp-testing` | Drives local web apps through headless browser checks. |
