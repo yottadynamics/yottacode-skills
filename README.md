@@ -15,6 +15,7 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | `diagnose` | Debugs reported failures through reproduce, minimize, hypothesize, instrument, fix, and regression-test. |
 | `dockerfile-review` | Reviews Dockerfiles for correctness, caching, image size, security, and reproducibility. |
 | `documentation-and-adrs` | Captures architectural decisions, why-comments, and durable project documentation. |
+| `domain-modeling` | Builds shared project vocabulary, bounded contexts, invariants, and ADR candidates. |
 | `executing-plans` | Executes an approved plan step-by-step with checkpoints and visible progress. |
 | `git-investigation` | Uses Git history, blame, pickaxe, and bisect to answer historical code questions. |
 | `handoff` | Writes concise handoff notes for continuing work in a fresh session. |
@@ -25,10 +26,26 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | `remote-ops` | Provides SSH, scp, rsync, and port-forwarding patterns for remote operations. |
 | `security-auditor` | Reviews code for vulnerability patterns and defense-in-depth gaps. |
 | `security-scanner` | Runs Trivy-based scans for CVEs, misconfigurations, secrets, licenses, and SBOMs. |
+| `skill-authoring` | Writes and reviews yottacode skills so they trigger reliably and validate cleanly. |
+| `spec-code-review` | Reviews diffs separately for repo standards and spec fidelity. |
 | `test-driven-development` | Guides feature and bug-fix work through the red-green-refactor loop. |
+| `to-spec` | Converts rough requests, issues, or conversations into concise implementation specs. |
+| `to-tickets` | Breaks specs or large plans into tracer-bullet tickets with dependencies and verification. |
 | `verification-before-completion` | Requires concrete verification before calling a fix or feature done. |
+| `wayfinder` | Maps multi-session work into decisions, research tasks, and ordered delivery tickets. |
 | `webapp-testing` | Drives local web apps through headless browser checks. |
 | `writing-plans` | Produces verifiable implementation plans for multi-file engineering tasks. |
+
+## Starter packs
+
+Use these combinations when installing skills for a project:
+
+| Pack | Skills |
+|---|---|
+| Planning chain | `domain-modeling`, `to-spec`, `to-tickets`, `writing-plans`, `executing-plans` |
+| Implementation discipline | `test-driven-development`, `verification-before-completion`, `spec-code-review`, `documentation-and-adrs` |
+| Large work / migrations | `wayfinder`, `domain-modeling`, `to-spec`, `to-tickets`, `handoff` |
+| Skill quality | `skill-authoring`, `spec-code-review`, `verification-before-completion` |
 
 ## Layout
 
