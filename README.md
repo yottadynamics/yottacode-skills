@@ -10,6 +10,7 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 
 | Skill | Purpose |
 |---|---|
+| `ansible-automation` | Writes, reviews, and tests Ansible playbooks, roles, and inventories for idempotency and least privilege. |
 | `brainstorming` | Clarifies scope, constraints, and trade-offs before planning a non-obvious change. |
 | `cve-explainer` | Explains CVEs from public sources with severity, impact, exposure, and remediation guidance. |
 | `diagnose` | Debugs reported failures through reproduce, minimize, hypothesize, instrument, fix, and regression-test. |
@@ -20,6 +21,8 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | `git-investigation` | Uses Git history, blame, pickaxe, and bisect to answer historical code questions. |
 | `handoff` | Writes concise handoff notes for continuing work in a fresh session. |
 | `improve-codebase-architecture` | Reviews module or service structure for coupling, cohesion, boundaries, and public surface. |
+| `kubernetes-operations` | Writes and reviews Kubernetes/OpenShift workloads, RBAC, and network policy; runs upgrades, drains, and backups. |
+| `kvm-virtualization` | Provisions, hardens, and operates KVM/QEMU/libvirt VMs, storage pools, snapshots, and live migration. |
 | `performance-profiler` | Finds and fixes performance problems with baseline measurements and profiling. |
 | `prototype` | Builds explicitly disposable prototypes to answer design or API questions. |
 | `receiving-code-review` | Verifies and applies PR review feedback without blindly accepting bad comments. |
@@ -28,6 +31,7 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | `security-scanner` | Runs Trivy-based scans for CVEs, misconfigurations, secrets, licenses, and SBOMs. |
 | `skill-authoring` | Writes and reviews yottacode skills so they trigger reliably and validate cleanly. |
 | `spec-code-review` | Reviews diffs separately for repo standards and spec fidelity. |
+| `technical-diagramming` | Produces version-controlled diagrams as code with Mermaid, PlantUML, Structurizr, and Draw.io. |
 | `test-driven-development` | Guides feature and bug-fix work through the red-green-refactor loop. |
 | `to-spec` | Converts rough requests, issues, or conversations into concise implementation specs. |
 | `to-tickets` | Breaks specs or large plans into tracer-bullet tickets with dependencies and verification. |
@@ -46,6 +50,8 @@ Use these combinations when installing skills for a project:
 | Implementation discipline | `test-driven-development`, `verification-before-completion`, `spec-code-review`, `documentation-and-adrs` |
 | Large work / migrations | `wayfinder`, `domain-modeling`, `to-spec`, `to-tickets`, `handoff` |
 | Skill quality | `skill-authoring`, `spec-code-review`, `verification-before-completion` |
+| Infrastructure | `ansible-automation`, `kubernetes-operations`, `kvm-virtualization`, `security-scanner` |
+| Architecture documentation | `technical-diagramming`, `documentation-and-adrs`, `improve-codebase-architecture` |
 
 ## Layout
 
