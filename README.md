@@ -29,6 +29,11 @@ Each skill directory contains a `SKILL.md` playbook plus optional `scripts/`, `r
 | `remote-ops` | Provides SSH, scp, rsync, and port-forwarding patterns for remote operations. |
 | `security-auditor` | Reviews code for vulnerability patterns and defense-in-depth gaps. |
 | `security-scanner` | Runs Trivy-based scans for CVEs, misconfigurations, secrets, licenses, and SBOMs. |
+| `seo-audit` | Audits supplied pages or content for technical and on-page SEO issues with evidence boundaries. |
+| `seo-content-brief` | Creates evidence-aware SEO content briefs with audience, intent, outline, links, and evidence gaps. |
+| `seo-geo` | Improves content for answerability and sourceability without promising AI citations or rankings. |
+| `seo-schema` | Drafts conservative JSON-LD structured data from supplied page facts. |
+| `seo-writer` | Writes reader-first search-oriented content from an approved brief and supplied evidence. |
 | `skill-authoring` | Writes and reviews yottacode skills so they trigger reliably and validate cleanly. |
 | `spec-code-review` | Reviews diffs separately for repo standards and spec fidelity. |
 | `technical-diagramming` | Produces version-controlled diagrams as code with Mermaid, PlantUML, Structurizr, and Draw.io. |
